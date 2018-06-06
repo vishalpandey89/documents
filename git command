@@ -1,0 +1,178 @@
+//beta server
+web -> http://beta.p5m.me 52.18.113.19:8080
+ssh -i p5m_beta.pem ubuntu@52.18.113.19
+mysql -hp5m-beta.ctmvg3zyetg8.eu-west-1.rds.amazonaws.com -uroot -pp5m_beta123
+b0st0n2014/anwaar.alrefai@hotmail.com---AWS
+
+
+//productionn server
+mysql -hp5m-prod.ctmvg3zyetg8.eu-west-1.rds.amazonaws.com -uroot -pp5m_beta123
+
+git status
+
+git difftool pom.xml
+
+git remote -v
+
+git status
+
+git add . /  git reset filename
+
+git commit -m 'allow cross domain'
+
+git pull origin master
+
+git push originV master
+
+profive_app
+profive@123
+
+//discard your changes
+git stash
+
+git pull origin develop //for myu
+
+
+//Server details
+
+pass-472cNpymBM6pmW
+
+db --
+
+ mysql -ujitendra -h148.251.178.194 -pjitendra
+
+
+ln -sf /usr/share/zoneinfo/Asia/Calcutta localtime
+//ANGULAR
+
+git pull origin develop
+
+alter table app_user change gender gender enum('MALE','FEMALE', 'MIXED') NOT NULL;
+
+
+SSH                  :   root@136.243.22.168          Password   :   123p5m!@#P5M || P5wq@#$401
+[11:07:19 AM] vishal pandey: databse password----      prof!le@501
+
+
+fuser -k 4200/tcp
+
+//MYU SERVER
+472cNpymBM6pmW
+
+
+Etc/UTC
+
+
+
+cat catalina.out | grep 'memory leak'
+"-Djava.awt.headless=true -Xmx2048m -XX:+UseConcMarkSweepGC"
+
+
+
+https://mvnrepository.com/artifact/se.jiderhamn.classloader-leak-prevention/classloader-leak-prevention
+
+https://github.com/mjiderhamn/classloader-leak-prevention
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+virtual envoinment
+vishal@vishal-ThinkPad-E450:~$ virtualenv angularcode
+New python executable in /home/vishal/angularcode/bin/python
+Installing setuptools, pip, wheel...done.
+vishal@vishal-ThinkPad-E450:~$ source angularcode/bin/activate
+(angularcode) vishal@vishal-ThinkPad-E450:~$ 
+
+
+install software with pip instead of apt-get
+
+/////////////////////////////////////////////////////////////////////////
+--------------------hit on server------------------------------------
+# Changed to use content-type flag instead of header: -H 'Content-Type: application/json'
+siege -c50 -t60S --content-type "application/json" 'http://domain.com/path/to/json.php POST {"ids": ["1","2","3"]}'
+
+sudo siege -c1 -t6S --content-type "application/json" 'http://qa-api.profive.co/profive-midl/api/v1/user/getTrainerList/?categoryId=0&size=20&page=0 GET'
+///PYTHON COMMONDS
+
+pip install Pillow
+python manage.py runserver
+
+
+crone command : 
+export VISUAL=vim;
+ crontab -e 
+sudo servicer cron start 
+sudo service cron restart 
+sudo service cron stop 
+sudo crontab -l
+
+
+
+SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
+
+
+netstat -lpn
+kill -9 27737
+python manage.py  runserver 0.0.0.0:8000
+ nohup python manage.py runserver 0.0.0.0:8070 &
+
+root@Ubuntu-1604-xenial-64-minimal /var/profive-cms/cms # nohup: ignoring input and appending output to 'nohup.out'
+
+
+Month wise new customer
+
+mysql> select count(*), MONTH(create_date) as month from (select min(DATE(create_date)) as create_date from class_join where status=1 group by user_id) as book GROUP BY month;
++----------+-------+
+| count(*) | month |
++----------+-------+
+|       70 |     1 |
+|       58 |     2 |
+|       46 |     3 |
+|       77 |     4 |
++----------+-------+
+
+ in a month returning user
+select id,user_id, create_date, MONTH(MAX(create_date)) as month,count(*) from class_join where status=1 and create_date<='2018-04-30 23:59:59' group by user_id having count(*)>1 and month=4;
+
+
+New Cutomer--April
+select distinct user_id from payment where create_date>'2018-03-31' and create_date<'2018-05-01' and user_id NOT IN (select distinct user_id from payment where  create_date<'2018-04-01' order by user_id);
+
+select distinct user_id from payment where create_date>='2018-05-01' and create_date<'2018-05-29' and user_id NOT IN (select distinct user_id from payment where  create_date<'2018-05-01' order by user_id);
+
+Returining
+select distinct user_id from payment where create_date>'2018-03-31' and create_date<'2018-05-01' and user_id  IN (select distinct user_id from payment where  create_date<'2018-04-01' order by user_id);
+
+select distinct user_id from payment where create_date>='2018-05-01' and create_date<'2018-05-29' and user_id  IN (select distinct user_id from payment where  create_date<'2018-05-01' order by user_id);
+
+
+
+
+
+git config --global credential.helper cache
+... which tells Git to keep your password cached in memory for (by default) 15 minutes. You can set a longer timeout with:
+
+git config --global credential.helper "cache --timeout=3600"
+
+
+total aatendence of mointh
+select * from class_join as cj,class_sessions as cs,classes as c where cj.class_session_id=cs.id and c.id=cs.class_id  and cs.status=1 and cs.date>='2018-05-01' and cs.date<'2018-05-29' and cj.status=1;
+
+
+select p.user_id,count(*),p.expiry_date,p.balance_classes, u.gender,u.email,u.first_name from payment p inner join users u on p.user_id=u.id where p.expiry_date < curdate() or p.balance_classes = 0 group by p.user_id INTO OUTFILE '/var/lib/mysql-files/orders.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

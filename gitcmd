@@ -1,0 +1,921 @@
+vishal@vishal-ThinkPad-E450:~$ pwd
+/home/vishal
+vishal@vishal-ThinkPad-E450:~$ mkdir p5m_projects
+vishal@vishal-ThinkPad-E450:~$ 
+vishal@vishal-ThinkPad-E450:~$ cd p5m_projects/
+vishal@vishal-ThinkPad-E450:~/p5m_projects$ git clone https://github.com/P5M/midl.git
+Cloning into 'midl'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+Checking connectivity... done.
+vishal@vishal-ThinkPad-E450:~/p5m_projects$ 
+vishal@vishal-ThinkPad-E450:~/p5m_projects$ ls
+midl
+vishal@vishal-ThinkPad-E450:~/p5m_projects$ cd midl/
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ git remote -v
+origin	https://github.com/P5M/midl.git (fetch)
+origin	https://github.com/P5M/midl.git (push)
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ git remote add originPush https://github.com/vishalpandey89/midl.git
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ git remote -v
+origin	https://github.com/P5M/midl.git (fetch)
+origin	https://github.com/P5M/midl.git (push)
+originPush	https://github.com/vishalpandey89/midl.git (fetch)
+originPush	https://github.com/vishalpandey89/midl.git (push)
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ git remote add originPull https://github.com/P5M/midl.git
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ git remote rm origin
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ git remote -v
+originPull	https://github.com/P5M/midl.git (fetch)
+originPull	https://github.com/P5M/midl.git (push)
+originPush	https://github.com/vishalpandey89/midl.git (fetch)
+originPush	https://github.com/vishalpandey89/midl.git (push)
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ 
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ sudo cp /home/vishal/Profive_Projects/profive-midl/* /home/vishal/p5m_projects/midl/
+[sudo] password for vishal: 
+Sorry, try again.
+[sudo] password for vishal: 
+Sorry, try again.
+[sudo] password for vishal: 
+sudo: 3 incorrect password attempts
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ sudo cp /home/vishal/Profive_Projects/profive-midl/* /home/vishal/p5m_projects/midl/
+[sudo] password for vishal: 
+cp: omitting directory '/home/vishal/Profive_Projects/profive-midl/src'
+cp: omitting directory '/home/vishal/Profive_Projects/profive-midl/target'
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ sudo cp -r /home/vishal/Profive_Projects/profive-midl/* /home/vishal/p5m_projects/midl/
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ 
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ 
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ 
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ ls
+pom.xml  README.md  README.txt  src  target
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ 
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ 
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README.txt
+	pom.xml
+	src/
+	target/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ 
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ 
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ 
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ git add .
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ git commit -am 'initial commit to profive git'
+[master 56f9ea5] initial commit to profive git
+ 306 files changed, 21807 insertions(+), 1 deletion(-)
+ create mode 100644 README.txt
+ create mode 100644 pom.xml
+ create mode 100644 src/main/java/com/profive/Constants.java
+ create mode 100644 src/main/java/com/profive/ProfiveConstant.java
+ create mode 100644 src/main/java/com/profive/dao/AppUserDao.java
+ create mode 100644 src/main/java/com/profive/dao/ClassCategoryDao.java
+ create mode 100644 src/main/java/com/profive/dao/ClassDetailsDao.java
+ create mode 100644 src/main/java/com/profive/dao/ClassTimingDao.java
+ create mode 100644 src/main/java/com/profive/dao/ClassTimingDaysMappingDao.java
+ create mode 100644 src/main/java/com/profive/dao/CountryDao.java
+ create mode 100644 src/main/java/com/profive/dao/DeviceDao.java
+ create mode 100644 src/main/java/com/profive/dao/GenericDao.java
+ create mode 100644 src/main/java/com/profive/dao/LookupDao.java
+ create mode 100644 src/main/java/com/profive/dao/RoleDao.java
+ create mode 100644 src/main/java/com/profive/dao/ScheduleClassDao.java
+ create mode 100644 src/main/java/com/profive/dao/SearchException.java
+ create mode 100644 src/main/java/com/profive/dao/UserDao.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/AppUserDaoHibernate.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/ClassCategoryDaoHibernate.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/ClassDetailsDaoHibernate.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/ClassTimingDaoHibernate.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/ClassTimingDaysMappingDaoHibernate.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/CountryDaoHibernate.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/DeviceDaoHibernate.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/GenericDaoHibernate.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/HibernateSearchTools.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/LookupDaoHibernate.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/RoleDaoHibernate.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/UserDaoHibernate.java
+ create mode 100644 src/main/java/com/profive/dao/spring/HibernateExtensionPostProcessor.java
+ create mode 100644 src/main/java/com/profive/helper/ResponseHelper.java
+ create mode 100644 src/main/java/com/profive/model/ActiveUser.java
+ create mode 100644 src/main/java/com/profive/model/Address.java
+ create mode 100644 src/main/java/com/profive/model/AppUser.java
+ create mode 100644 src/main/java/com/profive/model/BaseObject.java
+ create mode 100644 src/main/java/com/profive/model/City.java
+ create mode 100644 src/main/java/com/profive/model/ClassCategory.java
+ create mode 100644 src/main/java/com/profive/model/ClassDetail.java
+ create mode 100644 src/main/java/com/profive/model/ClassTiming.java
+ create mode 100644 src/main/java/com/profive/model/ClassTimingDaysMapping.java
+ create mode 100644 src/main/java/com/profive/model/Country.java
+ create mode 100644 src/main/java/com/profive/model/Device.java
+ create mode 100644 src/main/java/com/profive/model/GymAddress.java
+ create mode 100644 src/main/java/com/profive/model/JoinClassDeatils.java
+ create mode 100644 src/main/java/com/profive/model/LabelValue.java
+ create mode 100644 src/main/java/com/profive/model/MasterDays.java
+ create mode 100644 src/main/java/com/profive/model/Role.java
+ create mode 100644 src/main/java/com/profive/model/State.java
+ create mode 100644 src/main/java/com/profive/model/User.java
+ create mode 100644 src/main/java/com/profive/model/UserCategory.java
+ create mode 100644 src/main/java/com/profive/model/Venue.java
+ create mode 100644 src/main/java/com/profive/model/Wallet.java
+ create mode 100644 src/main/java/com/profive/model/WorkoutPlace.java
+ create mode 100644 src/main/java/com/profive/model/enums/ClassType.java
+ create mode 100644 src/main/java/com/profive/model/enums/DeviceType.java
+ create mode 100644 src/main/java/com/profive/model/enums/Gender.java
+ create mode 100644 src/main/java/com/profive/request/ChangePasswordDto.java
+ create mode 100644 src/main/java/com/profive/request/ClassDetailDto.java
+ create mode 100644 src/main/java/com/profive/request/ClassTimingDto.java
+ create mode 100644 src/main/java/com/profive/response/BaseResponse.java
+ create mode 100644 src/main/java/com/profive/service/AppUserManager.java
+ create mode 100644 src/main/java/com/profive/service/ClassCategoryManager.java
+ create mode 100644 src/main/java/com/profive/service/ClassDetailManager.java
+ create mode 100644 src/main/java/com/profive/service/CountryManager.java
+ create mode 100644 src/main/java/com/profive/service/DeviceManager.java
+ create mode 100644 src/main/java/com/profive/service/GenericManager.java
+ create mode 100644 src/main/java/com/profive/service/LookupManager.java
+ create mode 100644 src/main/java/com/profive/service/MailEngine.java
+ create mode 100644 src/main/java/com/profive/service/RoleManager.java
+ create mode 100644 src/main/java/com/profive/service/ScheduleClassManager.java
+ create mode 100644 src/main/java/com/profive/service/UserExistsException.java
+ create mode 100644 src/main/java/com/profive/service/UserManager.java
+ create mode 100644 src/main/java/com/profive/service/UserSecurityAdvice.java
+ create mode 100644 src/main/java/com/profive/service/UserService.java
+ create mode 100644 src/main/java/com/profive/service/impl/AppUserManagerImpl.java
+ create mode 100644 src/main/java/com/profive/service/impl/ClassCategoryManagerImpl.java
+ create mode 100644 src/main/java/com/profive/service/impl/ClassDetailManagerImpl.java
+ create mode 100644 src/main/java/com/profive/service/impl/CountryManagerImpl.java
+ create mode 100644 src/main/java/com/profive/service/impl/DeviceManagerImpl.java
+ create mode 100644 src/main/java/com/profive/service/impl/GenericManagerImpl.java
+ create mode 100644 src/main/java/com/profive/service/impl/LookupManagerImpl.java
+ create mode 100644 src/main/java/com/profive/service/impl/PasswordTokenManager.java
+ create mode 100644 src/main/java/com/profive/service/impl/PasswordTokenManagerImpl.java
+ create mode 100644 src/main/java/com/profive/service/impl/PersistentPasswordTokenManagerImpl.java
+ create mode 100644 src/main/java/com/profive/service/impl/RoleManagerImpl.java
+ create mode 100644 src/main/java/com/profive/service/impl/ScheduleClassManagerImpl.java
+ create mode 100644 src/main/java/com/profive/service/impl/UserManagerImpl.java
+ create mode 100644 src/main/java/com/profive/util/ConvertUtil.java
+ create mode 100644 src/main/java/com/profive/util/CurrencyConverter.java
+ create mode 100644 src/main/java/com/profive/util/DateConverter.java
+ create mode 100644 src/main/java/com/profive/util/DateUtil.java
+ create mode 100644 src/main/java/com/profive/util/TimestampConverter.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/BaseFormController.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/FileUpload.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/FileUploadController.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/PasswordHintController.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/ReloadController.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/SignupController.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/UpdatePasswordController.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/UserController.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/UserFormController.java
+ create mode 100644 src/main/java/com/profive/webapp/filter/LocaleFilter.java
+ create mode 100644 src/main/java/com/profive/webapp/filter/LocaleRequestWrapper.java
+ create mode 100644 src/main/java/com/profive/webapp/jsp/EscapeXml.java
+ create mode 100644 src/main/java/com/profive/webapp/jsp/EscapeXmlELResolver.java
+ create mode 100644 src/main/java/com/profive/webapp/jsp/EscapeXmlELResolverListener.java
+ create mode 100644 src/main/java/com/profive/webapp/listener/StartupListener.java
+ create mode 100644 src/main/java/com/profive/webapp/listener/UserCounterListener.java
+ create mode 100644 src/main/java/com/profive/webapp/spring/ValidatorExtensionPostProcessor.java
+ create mode 100644 src/main/java/com/profive/webapp/taglib/ConstantsTag.java
+ create mode 100644 src/main/java/com/profive/webapp/taglib/ConstantsTei.java
+ create mode 100644 src/main/java/com/profive/webapp/taglib/CountryTag.java
+ create mode 100644 src/main/java/com/profive/webapp/taglib/LabelTag.java
+ create mode 100644 src/main/java/com/profive/webapp/taglib/OutTag.java
+ create mode 100644 src/main/java/com/profive/webapp/util/CommonUtil.java
+ create mode 100644 src/main/java/com/profive/webapp/util/RequestUtil.java
+ create mode 100644 src/main/java/com/profive/webapp/util/ValidationUtil.java
+ create mode 100644 src/main/resources/ApplicationResources.properties
+ create mode 100644 src/main/resources/ApplicationResources_en.properties
+ create mode 100644 src/main/resources/META-INF/persistence.xml
+ create mode 100644 src/main/resources/accountCreated.vm
+ create mode 100644 src/main/resources/applicationContext-dao.xml
+ create mode 100644 src/main/resources/applicationContext-resources.xml
+ create mode 100644 src/main/resources/applicationContext-service.xml
+ create mode 100644 src/main/resources/default-data.xml
+ create mode 100644 src/main/resources/displaytag.properties
+ create mode 100644 src/main/resources/displaytag_en.properties
+ create mode 100644 src/main/resources/ehcache.xml
+ create mode 100644 src/main/resources/hibernate.cfg.xml
+ create mode 100644 src/main/resources/hibernate.properties
+ create mode 100644 src/main/resources/jdbc.properties
+ create mode 100644 src/main/resources/log4j.xml
+ create mode 100644 src/main/resources/mail.properties
+ create mode 100644 src/main/resources/navbarMenu.vm
+ create mode 100644 src/main/resources/navlistMenu.vm
+ create mode 100644 src/main/resources/packaged/hibernate.properties
+ create mode 100644 src/main/resources/passwordRecovery.vm
+ create mode 100644 src/main/resources/passwordUpdated.vm
+ create mode 100644 src/main/resources/velocity.properties
+ create mode 100644 src/main/webapp/403.jsp
+ create mode 100644 src/main/webapp/404.jsp
+ create mode 100644 src/main/webapp/WEB-INF/appfuse.tld
+ create mode 100644 src/main/webapp/WEB-INF/applicationContext-validation.xml
+ create mode 100644 src/main/webapp/WEB-INF/applicationContext.xml
+ create mode 100644 src/main/webapp/WEB-INF/cxf-servlet.xml
+ create mode 100644 src/main/webapp/WEB-INF/decorators.xml
+ create mode 100644 src/main/webapp/WEB-INF/dispatcher-servlet.xml
+ create mode 100644 src/main/webapp/WEB-INF/dwr.xml
+ create mode 100644 src/main/webapp/WEB-INF/menu-config.xml
+ create mode 100644 src/main/webapp/WEB-INF/pages/admin/activeUsers.jsp
+ create mode 100644 src/main/webapp/WEB-INF/pages/admin/userList.jsp
+ create mode 100644 src/main/webapp/WEB-INF/pages/dataAccessFailure.jsp
+ create mode 100644 src/main/webapp/WEB-INF/pages/fileupload.jsp
+ create mode 100644 src/main/webapp/WEB-INF/pages/home.jsp
+ create mode 100644 src/main/webapp/WEB-INF/pages/signup.jsp
+ create mode 100644 src/main/webapp/WEB-INF/pages/updatePasswordForm.jsp
+ create mode 100644 src/main/webapp/WEB-INF/pages/uploadDisplay.jsp
+ create mode 100644 src/main/webapp/WEB-INF/pages/userform.jsp
+ create mode 100644 src/main/webapp/WEB-INF/resin-web.xml
+ create mode 100644 src/main/webapp/WEB-INF/security.xml
+ create mode 100644 src/main/webapp/WEB-INF/sitemesh.xml
+ create mode 100644 src/main/webapp/WEB-INF/tags/assets.tag
+ create mode 100644 src/main/webapp/WEB-INF/urlrewrite.xml
+ create mode 100644 src/main/webapp/WEB-INF/validation.xml
+ create mode 100644 src/main/webapp/WEB-INF/validator-rules-custom.xml
+ create mode 100644 src/main/webapp/WEB-INF/validator-rules.xml
+ create mode 100644 src/main/webapp/WEB-INF/web.xml
+ create mode 100644 src/main/webapp/WEB-INF/wro.properties
+ create mode 100644 src/main/webapp/WEB-INF/wro.xml
+ create mode 100644 src/main/webapp/common/menu.jsp
+ create mode 100644 src/main/webapp/common/messages.jsp
+ create mode 100644 src/main/webapp/common/taglibs.jsp
+ create mode 100644 src/main/webapp/decorators/default.jsp
+ create mode 100644 src/main/webapp/error.jsp
+ create mode 100644 src/main/webapp/images/arrow_down.png
+ create mode 100644 src/main/webapp/images/arrow_off.png
+ create mode 100644 src/main/webapp/images/arrow_up.png
+ create mode 100644 src/main/webapp/images/favicon.ico
+ create mode 100644 src/main/webapp/images/ico_file_csv.png
+ create mode 100644 src/main/webapp/images/ico_file_excel.png
+ create mode 100644 src/main/webapp/images/ico_file_pdf.png
+ create mode 100644 src/main/webapp/images/ico_file_xml.png
+ create mode 100644 src/main/webapp/images/iconCalendar.gif
+ create mode 100644 src/main/webapp/images/iconEmail.gif
+ create mode 100644 src/main/webapp/images/iconHelp.gif
+ create mode 100644 src/main/webapp/images/iconInformation.gif
+ create mode 100644 src/main/webapp/images/iconWarning.gif
+ create mode 100644 src/main/webapp/images/logo.gif
+ create mode 100644 src/main/webapp/index.jsp
+ create mode 100644 src/main/webapp/login.jsp
+ create mode 100644 src/main/webapp/logout.jsp
+ create mode 100644 src/main/webapp/scripts/dojo/test.html
+ create mode 100644 src/main/webapp/scripts/login.js
+ create mode 100644 src/main/webapp/scripts/script.js
+ create mode 100644 src/main/webapp/scripts/validator.jsp
+ create mode 100644 src/main/webapp/styles/style.css
+ create mode 100644 src/site/site.xml
+ create mode 100644 src/test/java/com/profive/dao/BaseDaoTestCase.java
+ create mode 100644 src/test/java/com/profive/dao/GenericDaoTest.java
+ create mode 100644 src/test/java/com/profive/dao/LookupDaoTest.java
+ create mode 100644 src/test/java/com/profive/dao/RoleDaoTest.java
+ create mode 100644 src/test/java/com/profive/dao/UserDaoTest.java
+ create mode 100644 src/test/java/com/profive/dao/hibernate/HibernateConfigurationTest.java
+ create mode 100644 src/test/java/com/profive/service/BaseManagerTestCase.java
+ create mode 100644 src/test/java/com/profive/service/MailEngineTest.java
+ create mode 100644 src/test/java/com/profive/service/MockUserDetailsService.java
+ create mode 100644 src/test/java/com/profive/service/UserExistsExceptionTest.java
+ create mode 100644 src/test/java/com/profive/service/UserManagerTest.java
+ create mode 100644 src/test/java/com/profive/service/impl/BaseManagerMockTestCase.java
+ create mode 100644 src/test/java/com/profive/service/impl/LookupManagerImplTest.java
+ create mode 100644 src/test/java/com/profive/service/impl/PasswordTokenManagerTest.java
+ create mode 100644 src/test/java/com/profive/service/impl/PersistentPasswordTokenManagerTest.java
+ create mode 100644 src/test/java/com/profive/service/impl/UserManagerImplTest.java
+ create mode 100644 src/test/java/com/profive/service/impl/UserSecurityAdviceTest.java
+ create mode 100644 src/test/java/com/profive/util/DateConverterTest.java
+ create mode 100644 src/test/java/com/profive/util/DateUtilTest.java
+ create mode 100644 src/test/java/com/profive/webapp/controller/BaseControllerTestCase.java
+ create mode 100644 src/test/java/com/profive/webapp/controller/PasswordHintControllerTest.java
+ create mode 100644 src/test/java/com/profive/webapp/controller/SignupControllerTest.java
+ create mode 100644 src/test/java/com/profive/webapp/controller/UpdatePasswordControllerTest.java
+ create mode 100644 src/test/java/com/profive/webapp/controller/UserControllerTest.java
+ create mode 100644 src/test/java/com/profive/webapp/controller/UserFormControllerTest.java
+ create mode 100644 src/test/java/com/profive/webapp/filter/LocaleFilterTest.java
+ create mode 100644 src/test/java/com/profive/webapp/filter/MockFilterChain.java
+ create mode 100644 src/test/java/com/profive/webapp/listener/StartupListenerTest.java
+ create mode 100644 src/test/resources/ApplicationResources_de.properties
+ create mode 100644 src/test/resources/ApplicationResources_fr.properties
+ create mode 100644 src/test/resources/ApplicationResources_nl.properties
+ create mode 100644 src/test/resources/applicationContext-resources.xml
+ create mode 100644 src/test/resources/applicationContext-test.xml
+ create mode 100644 src/test/resources/com/profive/service/UserManagerTest.properties
+ create mode 100644 src/test/resources/com/profive/service/impl/UserManagerImplTest.properties
+ create mode 100644 src/test/resources/config.xmlf
+ create mode 100644 src/test/resources/hibernate.properties
+ create mode 100644 src/test/resources/jdbc.properties
+ create mode 100644 src/test/resources/log4j.xml
+ create mode 100644 src/test/resources/login.xmlf
+ create mode 100644 src/test/resources/mail.properties
+ create mode 100644 src/test/resources/passwordRecovery.vm
+ create mode 100644 src/test/resources/passwordUpdated.vm
+ create mode 100644 src/test/resources/sample-data.xml
+ create mode 100644 src/test/resources/sample-data.xsd
+ create mode 100644 src/test/resources/test-attachment.txt
+ create mode 100644 src/test/resources/web-tests.xml
+ create mode 100644 target/classes/ApplicationResources.properties
+ create mode 100644 target/classes/ApplicationResources_en.properties
+ create mode 100644 target/classes/META-INF/persistence.xml
+ create mode 100644 target/classes/accountCreated.vm
+ create mode 100644 target/classes/applicationContext-dao.xml
+ create mode 100644 target/classes/applicationContext-resources.xml
+ create mode 100644 target/classes/applicationContext-service.xml
+ create mode 100644 target/classes/default-data.xml
+ create mode 100644 target/classes/displaytag.properties
+ create mode 100644 target/classes/displaytag_en.properties
+ create mode 100644 target/classes/ehcache.xml
+ create mode 100644 target/classes/hibernate.cfg.xml
+ create mode 100644 target/classes/hibernate.properties
+ create mode 100644 target/classes/jdbc.properties
+ create mode 100644 target/classes/log4j.xml
+ create mode 100644 target/classes/mail.properties
+ create mode 100644 target/classes/navbarMenu.vm
+ create mode 100644 target/classes/navlistMenu.vm
+ create mode 100644 target/classes/packaged/hibernate.properties
+ create mode 100644 target/classes/passwordRecovery.vm
+ create mode 100644 target/classes/passwordUpdated.vm
+ create mode 100644 target/classes/velocity.properties
+ create mode 100644 target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
+ create mode 100644 target/m2e-wtp/web-resources/META-INF/maven/com.profive.midl/profive-midl/pom.properties
+ create mode 100644 target/m2e-wtp/web-resources/META-INF/maven/com.profive.midl/profive-midl/pom.xml
+ create mode 100644 target/m2e-wtp/web-resources/WEB-INF/classes/hibernate.properties
+ create mode 100644 target/test-classes/ApplicationResources_de.properties
+ create mode 100644 target/test-classes/ApplicationResources_fr.properties
+ create mode 100644 target/test-classes/ApplicationResources_nl.properties
+ create mode 100644 target/test-classes/WEB-INF/applicationContext-validation.xml
+ create mode 100644 target/test-classes/WEB-INF/applicationContext.xml
+ create mode 100644 target/test-classes/WEB-INF/cxf-servlet.xml
+ create mode 100644 target/test-classes/WEB-INF/decorators.xml
+ create mode 100644 target/test-classes/WEB-INF/dispatcher-servlet.xml
+ create mode 100644 target/test-classes/WEB-INF/dwr.xml
+ create mode 100644 target/test-classes/WEB-INF/menu-config.xml
+ create mode 100644 target/test-classes/WEB-INF/resin-web.xml
+ create mode 100644 target/test-classes/WEB-INF/security.xml
+ create mode 100644 target/test-classes/WEB-INF/sitemesh.xml
+ create mode 100644 target/test-classes/WEB-INF/urlrewrite.xml
+ create mode 100644 target/test-classes/WEB-INF/validation.xml
+ create mode 100644 target/test-classes/WEB-INF/validator-rules-custom.xml
+ create mode 100644 target/test-classes/WEB-INF/validator-rules.xml
+ create mode 100644 target/test-classes/WEB-INF/web.xml
+ create mode 100644 target/test-classes/WEB-INF/wro.xml
+ create mode 100644 target/test-classes/applicationContext-resources.xml
+ create mode 100644 target/test-classes/applicationContext-test.xml
+ create mode 100644 target/test-classes/com/profive/service/UserManagerTest.properties
+ create mode 100644 target/test-classes/com/profive/service/impl/UserManagerImplTest.properties
+ create mode 100644 target/test-classes/config.xmlf
+ create mode 100644 target/test-classes/hibernate.properties
+ create mode 100644 target/test-classes/jdbc.properties
+ create mode 100644 target/test-classes/log4j.xml
+ create mode 100644 target/test-classes/login.xmlf
+ create mode 100644 target/test-classes/mail.properties
+ create mode 100644 target/test-classes/passwordRecovery.vm
+ create mode 100644 target/test-classes/passwordUpdated.vm
+ create mode 100644 target/test-classes/sample-data.xml
+ create mode 100644 target/test-classes/sample-data.xsd
+ create mode 100644 target/test-classes/test-attachment.txt
+ create mode 100644 target/test-classes/web-tests.xml
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ git push originPush 
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream originPush master
+
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ git push originPush master
+Counting objects: 326, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (300/300), done.
+Writing objects: 100% (326/326), 175.42 KiB | 0 bytes/s, done.
+Total 326 (delta 50), reused 0 (delta 0)
+remote: Resolving deltas: 100% (50/50), done.
+To https://github.com/vishalpandey89/midl.git
+   cd8066b..56f9ea5  master -> master
+vishal@vishal-ThinkPad-E450:~/p5m_projects/midl$ cd ..
+vishal@vishal-ThinkPad-E450:~/p5m_projects$ ls
+midl
+vishal@vishal-ThinkPad-E450:~/p5m_projects$ git clone https://github.com/P5M/core-api.git
+Cloning into 'core-api'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+Checking connectivity... done.
+vishal@vishal-ThinkPad-E450:~/p5m_projects$ ls
+core-api  midl
+vishal@vishal-ThinkPad-E450:~/p5m_projects$ cd core-api/
+vishal@vishal-ThinkPad-E450:~/p5m_projects/core-api$ git remote -v
+origin	https://github.com/P5M/core-api.git (fetch)
+origin	https://github.com/P5M/core-api.git (push)
+vishal@vishal-ThinkPad-E450:~/p5m_projects/core-api$ git remote add originPush https://github.com/vishalpandey89/core-api.git
+vishal@vishal-ThinkPad-E450:~/p5m_projects/core-api$ git remote -v
+origin	https://github.com/P5M/core-api.git (fetch)
+origin	https://github.com/P5M/core-api.git (push)
+originPush	https://github.com/vishalpandey89/core-api.git (fetch)
+originPush	https://github.com/vishalpandey89/core-api.git (push)
+vishal@vishal-ThinkPad-E450:~/p5m_projects/core-api$ git remote rm origin
+vishal@vishal-ThinkPad-E450:~/p5m_projects/core-api$ sudo cp /home/vishal/Profive_Projects/profive-core-api/* /home/vishal/p5m_projects/core-api/
+cp: omitting directory '/home/vishal/Profive_Projects/profive-core-api/src'
+cp: omitting directory '/home/vishal/Profive_Projects/profive-core-api/target'
+vishal@vishal-ThinkPad-E450:~/p5m_projects/core-api$ sudo cp -r /home/vishal/Profive_Projects/profive-core-api/* /home/vishal/p5m_projects/core-api/
+vishal@vishal-ThinkPad-E450:~/p5m_projects/core-api$ ls
+pom.xml  README.md  README.txt  src  target  velocity.log
+vishal@vishal-ThinkPad-E450:~/p5m_projects/core-api$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README.txt
+	pom.xml
+	src/
+	target/
+	velocity.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vishal@vishal-ThinkPad-E450:~/p5m_projects/core-api$ git add .
+vishal@vishal-ThinkPad-E450:~/p5m_projects/core-api$ git commit -am 'initail commit core'
+[master 6ed5cdb] initail commit core
+ 419 files changed, 20825 insertions(+), 1 deletion(-)
+ create mode 100644 README.txt
+ create mode 100644 pom.xml
+ create mode 100644 src/main/java/com/profive/Constants.java
+ create mode 100644 src/main/java/com/profive/dao/AppUserDao.java
+ create mode 100644 src/main/java/com/profive/dao/GenericDao.java
+ create mode 100644 src/main/java/com/profive/dao/LookupDao.java
+ create mode 100644 src/main/java/com/profive/dao/RoleDao.java
+ create mode 100644 src/main/java/com/profive/dao/SearchException.java
+ create mode 100644 src/main/java/com/profive/dao/UserDao.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/AppUserDaoHibernate.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/GenericDaoHibernate.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/HibernateSearchTools.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/LookupDaoHibernate.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/RoleDaoHibernate.java
+ create mode 100644 src/main/java/com/profive/dao/hibernate/UserDaoHibernate.java
+ create mode 100644 src/main/java/com/profive/dao/spring/HibernateExtensionPostProcessor.java
+ create mode 100644 src/main/java/com/profive/helper/ResponseHelper.java
+ create mode 100644 src/main/java/com/profive/model/Address.java
+ create mode 100644 src/main/java/com/profive/model/AppUser.java
+ create mode 100644 src/main/java/com/profive/model/BaseObject.java
+ create mode 100644 src/main/java/com/profive/model/LabelValue.java
+ create mode 100644 src/main/java/com/profive/model/Role.java
+ create mode 100644 src/main/java/com/profive/model/User.java
+ create mode 100644 src/main/java/com/profive/model/UserCategory.java
+ create mode 100644 src/main/java/com/profive/model/Wallet.java
+ create mode 100644 src/main/java/com/profive/model/enums/Gender.java
+ create mode 100644 src/main/java/com/profive/response/AppUserDto.java
+ create mode 100644 src/main/java/com/profive/response/BaseResponse.java
+ create mode 100644 src/main/java/com/profive/service/AppUserManager.java
+ create mode 100644 src/main/java/com/profive/service/GenericManager.java
+ create mode 100644 src/main/java/com/profive/service/LookupManager.java
+ create mode 100644 src/main/java/com/profive/service/MailEngine.java
+ create mode 100644 src/main/java/com/profive/service/RoleManager.java
+ create mode 100644 src/main/java/com/profive/service/UserExistsException.java
+ create mode 100644 src/main/java/com/profive/service/UserManager.java
+ create mode 100644 src/main/java/com/profive/service/UserSecurityAdvice.java
+ create mode 100644 src/main/java/com/profive/service/UserService.java
+ create mode 100644 src/main/java/com/profive/service/impl/AppUserManagerImpl.java
+ create mode 100644 src/main/java/com/profive/service/impl/GenericManagerImpl.java
+ create mode 100644 src/main/java/com/profive/service/impl/LookupManagerImpl.java
+ create mode 100644 src/main/java/com/profive/service/impl/PasswordTokenManager.java
+ create mode 100644 src/main/java/com/profive/service/impl/PasswordTokenManagerImpl.java
+ create mode 100644 src/main/java/com/profive/service/impl/PersistentPasswordTokenManagerImpl.java
+ create mode 100644 src/main/java/com/profive/service/impl/RoleManagerImpl.java
+ create mode 100644 src/main/java/com/profive/service/impl/UserManagerImpl.java
+ create mode 100644 src/main/java/com/profive/util/ConvertUtil.java
+ create mode 100644 src/main/java/com/profive/util/CurrencyConverter.java
+ create mode 100644 src/main/java/com/profive/util/DateConverter.java
+ create mode 100644 src/main/java/com/profive/util/DateUtil.java
+ create mode 100644 src/main/java/com/profive/util/TimestampConverter.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/BaseFormController.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/FileUpload.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/FileUploadController.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/PasswordHintController.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/ReloadController.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/SignupController.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/UpdatePasswordController.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/UserController.java
+ create mode 100644 src/main/java/com/profive/webapp/controller/UserFormController.java
+ create mode 100644 src/main/java/com/profive/webapp/filter/LocaleFilter.java
+ create mode 100644 src/main/java/com/profive/webapp/filter/LocaleRequestWrapper.java
+ create mode 100644 src/main/java/com/profive/webapp/jsp/EscapeXml.java
+ create mode 100644 src/main/java/com/profive/webapp/jsp/EscapeXmlELResolver.java
+ create mode 100644 src/main/java/com/profive/webapp/jsp/EscapeXmlELResolverListener.java
+ create mode 100644 src/main/java/com/profive/webapp/listener/StartupListener.java
+ create mode 100644 src/main/java/com/profive/webapp/listener/UserCounterListener.java
+ create mode 100644 src/main/java/com/profive/webapp/spring/ValidatorExtensionPostProcessor.java
+ create mode 100644 src/main/java/com/profive/webapp/taglib/ConstantsTag.java
+ create mode 100644 src/main/java/com/profive/webapp/taglib/ConstantsTei.java
+ create mode 100644 src/main/java/com/profive/webapp/taglib/CountryTag.java
+ create mode 100644 src/main/java/com/profive/webapp/taglib/LabelTag.java
+ create mode 100644 src/main/java/com/profive/webapp/taglib/OutTag.java
+ create mode 100644 src/main/java/com/profive/webapp/util/CommonUtil.java
+ create mode 100644 src/main/java/com/profive/webapp/util/RequestUtil.java
+ create mode 100644 src/main/java/com/profive/webapp/util/ValidationUtil.java
+ create mode 100644 src/main/resources/ApplicationResources.properties
+ create mode 100644 src/main/resources/ApplicationResources_en.properties
+ create mode 100644 src/main/resources/META-INF/persistence.xml
+ create mode 100644 src/main/resources/accountCreated.vm
+ create mode 100644 src/main/resources/applicationContext-dao.xml
+ create mode 100644 src/main/resources/applicationContext-resources.xml
+ create mode 100644 src/main/resources/applicationContext-service.xml
+ create mode 100644 src/main/resources/default-data.xml
+ create mode 100644 src/main/resources/displaytag.properties
+ create mode 100644 src/main/resources/displaytag_en.properties
+ create mode 100644 src/main/resources/ehcache.xml
+ create mode 100644 src/main/resources/hibernate.cfg.xml
+ create mode 100644 src/main/resources/hibernate.properties
+ create mode 100644 src/main/resources/jdbc.properties
+ create mode 100644 src/main/resources/log4j.xml
+ create mode 100644 src/main/resources/mail.properties
+ create mode 100644 src/main/resources/navbarMenu.vm
+ create mode 100644 src/main/resources/navlistMenu.vm
+ create mode 100644 src/main/resources/packaged/hibernate.properties
+ create mode 100644 src/main/resources/passwordRecovery.vm
+ create mode 100644 src/main/resources/passwordUpdated.vm
+ create mode 100644 src/main/resources/velocity.properties
+ create mode 100644 src/main/webapp/403.jsp
+ create mode 100644 src/main/webapp/404.jsp
+ create mode 100644 src/main/webapp/WEB-INF/appfuse.tld
+ create mode 100644 src/main/webapp/WEB-INF/applicationContext-validation.xml
+ create mode 100644 src/main/webapp/WEB-INF/applicationContext.xml
+ create mode 100644 src/main/webapp/WEB-INF/cxf-servlet.xml
+ create mode 100644 src/main/webapp/WEB-INF/decorators.xml
+ create mode 100644 src/main/webapp/WEB-INF/dispatcher-servlet.xml
+ create mode 100644 src/main/webapp/WEB-INF/dwr.xml
+ create mode 100644 src/main/webapp/WEB-INF/menu-config.xml
+ create mode 100644 src/main/webapp/WEB-INF/pages/admin/activeUsers.jsp
+ create mode 100644 src/main/webapp/WEB-INF/pages/admin/userList.jsp
+ create mode 100644 src/main/webapp/WEB-INF/pages/dataAccessFailure.jsp
+ create mode 100644 src/main/webapp/WEB-INF/pages/fileupload.jsp
+ create mode 100644 src/main/webapp/WEB-INF/pages/home.jsp
+ create mode 100644 src/main/webapp/WEB-INF/pages/signup.jsp
+ create mode 100644 src/main/webapp/WEB-INF/pages/updatePasswordForm.jsp
+ create mode 100644 src/main/webapp/WEB-INF/pages/uploadDisplay.jsp
+ create mode 100644 src/main/webapp/WEB-INF/pages/userform.jsp
+ create mode 100644 src/main/webapp/WEB-INF/resin-web.xml
+ create mode 100644 src/main/webapp/WEB-INF/security.xml
+ create mode 100644 src/main/webapp/WEB-INF/sitemesh.xml
+ create mode 100644 src/main/webapp/WEB-INF/tags/assets.tag
+ create mode 100644 src/main/webapp/WEB-INF/urlrewrite.xml
+ create mode 100644 src/main/webapp/WEB-INF/validation.xml
+ create mode 100644 src/main/webapp/WEB-INF/validator-rules-custom.xml
+ create mode 100644 src/main/webapp/WEB-INF/validator-rules.xml
+ create mode 100644 src/main/webapp/WEB-INF/web.xml
+ create mode 100644 src/main/webapp/WEB-INF/wro.properties
+ create mode 100644 src/main/webapp/WEB-INF/wro.xml
+ create mode 100644 src/main/webapp/common/menu.jsp
+ create mode 100644 src/main/webapp/common/messages.jsp
+ create mode 100644 src/main/webapp/common/taglibs.jsp
+ create mode 100644 src/main/webapp/decorators/default.jsp
+ create mode 100644 src/main/webapp/error.jsp
+ create mode 100644 src/main/webapp/images/arrow_down.png
+ create mode 100644 src/main/webapp/images/arrow_off.png
+ create mode 100644 src/main/webapp/images/arrow_up.png
+ create mode 100644 src/main/webapp/images/favicon.ico
+ create mode 100644 src/main/webapp/images/ico_file_csv.png
+ create mode 100644 src/main/webapp/images/ico_file_excel.png
+ create mode 100644 src/main/webapp/images/ico_file_pdf.png
+ create mode 100644 src/main/webapp/images/ico_file_xml.png
+ create mode 100644 src/main/webapp/images/iconCalendar.gif
+ create mode 100644 src/main/webapp/images/iconEmail.gif
+ create mode 100644 src/main/webapp/images/iconHelp.gif
+ create mode 100644 src/main/webapp/images/iconInformation.gif
+ create mode 100644 src/main/webapp/images/iconWarning.gif
+ create mode 100644 src/main/webapp/images/logo.gif
+ create mode 100644 src/main/webapp/index.jsp
+ create mode 100644 src/main/webapp/login.jsp
+ create mode 100644 src/main/webapp/logout.jsp
+ create mode 100644 src/main/webapp/scripts/dojo/test.html
+ create mode 100644 src/main/webapp/scripts/login.js
+ create mode 100644 src/main/webapp/scripts/script.js
+ create mode 100644 src/main/webapp/scripts/validator.jsp
+ create mode 100644 src/main/webapp/styles/style.css
+ create mode 100644 src/site/site.xml
+ create mode 100644 src/test/java/com/profive/dao/BaseDaoTestCase.java
+ create mode 100644 src/test/java/com/profive/dao/GenericDaoTest.java
+ create mode 100644 src/test/java/com/profive/dao/LookupDaoTest.java
+ create mode 100644 src/test/java/com/profive/dao/RoleDaoTest.java
+ create mode 100644 src/test/java/com/profive/dao/UserDaoTest.java
+ create mode 100644 src/test/java/com/profive/dao/hibernate/HibernateConfigurationTest.java
+ create mode 100644 src/test/java/com/profive/service/BaseManagerTestCase.java
+ create mode 100644 src/test/java/com/profive/service/MailEngineTest.java
+ create mode 100644 src/test/java/com/profive/service/MockUserDetailsService.java
+ create mode 100644 src/test/java/com/profive/service/UserExistsExceptionTest.java
+ create mode 100644 src/test/java/com/profive/service/UserManagerTest.java
+ create mode 100644 src/test/java/com/profive/service/impl/BaseManagerMockTestCase.java
+ create mode 100644 src/test/java/com/profive/service/impl/LookupManagerImplTest.java
+ create mode 100644 src/test/java/com/profive/service/impl/PasswordTokenManagerTest.java
+ create mode 100644 src/test/java/com/profive/service/impl/PersistentPasswordTokenManagerTest.java
+ create mode 100644 src/test/java/com/profive/service/impl/UserManagerImplTest.java
+ create mode 100644 src/test/java/com/profive/service/impl/UserSecurityAdviceTest.java
+ create mode 100644 src/test/java/com/profive/util/DateConverterTest.java
+ create mode 100644 src/test/java/com/profive/util/DateUtilTest.java
+ create mode 100644 src/test/java/com/profive/webapp/controller/BaseControllerTestCase.java
+ create mode 100644 src/test/java/com/profive/webapp/controller/PasswordHintControllerTest.java
+ create mode 100644 src/test/java/com/profive/webapp/controller/SignupControllerTest.java
+ create mode 100644 src/test/java/com/profive/webapp/controller/UpdatePasswordControllerTest.java
+ create mode 100644 src/test/java/com/profive/webapp/controller/UserControllerTest.java
+ create mode 100644 src/test/java/com/profive/webapp/controller/UserFormControllerTest.java
+ create mode 100644 src/test/java/com/profive/webapp/filter/LocaleFilterTest.java
+ create mode 100644 src/test/java/com/profive/webapp/filter/MockFilterChain.java
+ create mode 100644 src/test/java/com/profive/webapp/listener/StartupListenerTest.java
+ create mode 100644 src/test/resources/ApplicationResources_de.properties
+ create mode 100644 src/test/resources/ApplicationResources_fr.properties
+ create mode 100644 src/test/resources/ApplicationResources_nl.properties
+ create mode 100644 src/test/resources/applicationContext-resources.xml
+ create mode 100644 src/test/resources/applicationContext-test.xml
+ create mode 100644 src/test/resources/com/profive/service/UserManagerTest.properties
+ create mode 100644 src/test/resources/com/profive/service/impl/UserManagerImplTest.properties
+ create mode 100644 src/test/resources/config.xmlf
+ create mode 100644 src/test/resources/hibernate.properties
+ create mode 100644 src/test/resources/jdbc.properties
+ create mode 100644 src/test/resources/log4j.xml
+ create mode 100644 src/test/resources/login.xmlf
+ create mode 100644 src/test/resources/mail.properties
+ create mode 100644 src/test/resources/passwordRecovery.vm
+ create mode 100644 src/test/resources/passwordUpdated.vm
+ create mode 100644 src/test/resources/sample-data.xml
+ create mode 100644 src/test/resources/sample-data.xsd
+ create mode 100644 src/test/resources/test-attachment.txt
+ create mode 100644 src/test/resources/web-tests.xml
+ create mode 100644 target/classes/ApplicationResources.properties
+ create mode 100644 target/classes/ApplicationResources_en.properties
+ create mode 100644 target/classes/META-INF/MANIFEST.MF
+ create mode 100644 target/classes/META-INF/maven/com.profive.core/profive-core-api/pom.properties
+ create mode 100644 target/classes/META-INF/maven/com.profive.core/profive-core-api/pom.xml
+ create mode 100644 target/classes/META-INF/persistence.xml
+ create mode 100644 target/classes/accountCreated.vm
+ create mode 100644 target/classes/applicationContext-dao.xml
+ create mode 100644 target/classes/applicationContext-resources.xml
+ create mode 100644 target/classes/applicationContext-service.xml
+ create mode 100644 target/classes/com/profive/Constants.class
+ create mode 100644 target/classes/com/profive/dao/AppUserDao.class
+ create mode 100644 target/classes/com/profive/dao/GenericDao.class
+ create mode 100644 target/classes/com/profive/dao/LookupDao.class
+ create mode 100644 target/classes/com/profive/dao/RoleDao.class
+ create mode 100644 target/classes/com/profive/dao/SearchException.class
+ create mode 100644 target/classes/com/profive/dao/UserDao.class
+ create mode 100644 target/classes/com/profive/dao/hibernate/AppUserDaoHibernate.class
+ create mode 100644 target/classes/com/profive/dao/hibernate/GenericDaoHibernate.class
+ create mode 100644 target/classes/com/profive/dao/hibernate/HibernateSearchTools.class
+ create mode 100644 target/classes/com/profive/dao/hibernate/LookupDaoHibernate.class
+ create mode 100644 target/classes/com/profive/dao/hibernate/RoleDaoHibernate.class
+ create mode 100644 target/classes/com/profive/dao/hibernate/UserDaoHibernate.class
+ create mode 100644 target/classes/com/profive/dao/spring/HibernateExtensionPostProcessor.class
+ create mode 100644 target/classes/com/profive/helper/ResponseHelper.class
+ create mode 100644 target/classes/com/profive/model/Address.class
+ create mode 100644 target/classes/com/profive/model/AppUser.class
+ create mode 100644 target/classes/com/profive/model/BaseObject.class
+ create mode 100644 target/classes/com/profive/model/LabelValue$1.class
+ create mode 100644 target/classes/com/profive/model/LabelValue.class
+ create mode 100644 target/classes/com/profive/model/Role.class
+ create mode 100644 target/classes/com/profive/model/User.class
+ create mode 100644 target/classes/com/profive/model/UserCategory.class
+ create mode 100644 target/classes/com/profive/model/Wallet.class
+ create mode 100644 target/classes/com/profive/model/enums/Gender.class
+ create mode 100644 target/classes/com/profive/response/AppUserDto.class
+ create mode 100644 target/classes/com/profive/response/BaseResponse.class
+ create mode 100644 target/classes/com/profive/service/AppUserManager.class
+ create mode 100644 target/classes/com/profive/service/GenericManager.class
+ create mode 100644 target/classes/com/profive/service/LookupManager.class
+ create mode 100644 target/classes/com/profive/service/MailEngine.class
+ create mode 100644 target/classes/com/profive/service/RoleManager.class
+ create mode 100644 target/classes/com/profive/service/UserExistsException.class
+ create mode 100644 target/classes/com/profive/service/UserManager.class
+ create mode 100644 target/classes/com/profive/service/UserSecurityAdvice.class
+ create mode 100644 target/classes/com/profive/service/UserService.class
+ create mode 100644 target/classes/com/profive/service/impl/AppUserManagerImpl.class
+ create mode 100644 target/classes/com/profive/service/impl/GenericManagerImpl.class
+ create mode 100644 target/classes/com/profive/service/impl/LookupManagerImpl.class
+ create mode 100644 target/classes/com/profive/service/impl/PasswordTokenManager.class
+ create mode 100644 target/classes/com/profive/service/impl/PasswordTokenManagerImpl.class
+ create mode 100644 target/classes/com/profive/service/impl/PersistentPasswordTokenManagerImpl.class
+ create mode 100644 target/classes/com/profive/service/impl/RoleManagerImpl.class
+ create mode 100644 target/classes/com/profive/service/impl/UserManagerImpl.class
+ create mode 100644 target/classes/com/profive/util/ConvertUtil.class
+ create mode 100644 target/classes/com/profive/util/CurrencyConverter.class
+ create mode 100644 target/classes/com/profive/util/DateConverter.class
+ create mode 100644 target/classes/com/profive/util/DateUtil.class
+ create mode 100644 target/classes/com/profive/util/TimestampConverter.class
+ create mode 100644 target/classes/com/profive/webapp/controller/BaseFormController.class
+ create mode 100644 target/classes/com/profive/webapp/controller/FileUpload.class
+ create mode 100644 target/classes/com/profive/webapp/controller/FileUploadController.class
+ create mode 100644 target/classes/com/profive/webapp/controller/PasswordHintController.class
+ create mode 100644 target/classes/com/profive/webapp/controller/ReloadController.class
+ create mode 100644 target/classes/com/profive/webapp/controller/SignupController.class
+ create mode 100644 target/classes/com/profive/webapp/controller/UpdatePasswordController.class
+ create mode 100644 target/classes/com/profive/webapp/controller/UserController.class
+ create mode 100644 target/classes/com/profive/webapp/controller/UserFormController.class
+ create mode 100644 target/classes/com/profive/webapp/filter/LocaleFilter.class
+ create mode 100644 target/classes/com/profive/webapp/filter/LocaleRequestWrapper.class
+ create mode 100644 target/classes/com/profive/webapp/jsp/EscapeXml.class
+ create mode 100644 target/classes/com/profive/webapp/jsp/EscapeXmlELResolver$1.class
+ create mode 100644 target/classes/com/profive/webapp/jsp/EscapeXmlELResolver.class
+ create mode 100644 target/classes/com/profive/webapp/jsp/EscapeXmlELResolverListener.class
+ create mode 100644 target/classes/com/profive/webapp/listener/StartupListener.class
+ create mode 100644 target/classes/com/profive/webapp/listener/UserCounterListener.class
+ create mode 100644 target/classes/com/profive/webapp/spring/ValidatorExtensionPostProcessor.class
+ create mode 100644 target/classes/com/profive/webapp/taglib/ConstantsTag.class
+ create mode 100644 target/classes/com/profive/webapp/taglib/ConstantsTei.class
+ create mode 100644 target/classes/com/profive/webapp/taglib/CountryTag$LabelValueComparator.class
+ create mode 100644 target/classes/com/profive/webapp/taglib/CountryTag.class
+ create mode 100644 target/classes/com/profive/webapp/taglib/LabelTag.class
+ create mode 100644 target/classes/com/profive/webapp/taglib/OutTag.class
+ create mode 100644 target/classes/com/profive/webapp/util/CommonUtil.class
+ create mode 100644 target/classes/com/profive/webapp/util/RequestUtil.class
+ create mode 100644 target/classes/com/profive/webapp/util/ValidationUtil.class
+ create mode 100644 target/classes/default-data.xml
+ create mode 100644 target/classes/displaytag.properties
+ create mode 100644 target/classes/displaytag_en.properties
+ create mode 100644 target/classes/ehcache.xml
+ create mode 100644 target/classes/hibernate.cfg.xml
+ create mode 100644 target/classes/hibernate.properties
+ create mode 100644 target/classes/jdbc.properties
+ create mode 100644 target/classes/log4j.xml
+ create mode 100644 target/classes/mail.properties
+ create mode 100644 target/classes/navbarMenu.vm
+ create mode 100644 target/classes/navlistMenu.vm
+ create mode 100644 target/classes/packaged/hibernate.properties
+ create mode 100644 target/classes/passwordRecovery.vm
+ create mode 100644 target/classes/passwordUpdated.vm
+ create mode 100644 target/classes/velocity.properties
+ create mode 100644 target/maven-archiver/pom.properties
+ create mode 100644 target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+ create mode 100644 target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+ create mode 100644 target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+ create mode 100644 target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+ create mode 100644 target/profive-core-api-3.0.0.jar
+ create mode 100644 target/surefire-reports/TEST-com.profive.dao.GenericDaoTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.dao.LookupDaoTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.dao.RoleDaoTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.dao.UserDaoTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.dao.hibernate.HibernateConfigurationTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.service.MailEngineTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.service.UserExistsExceptionTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.service.UserManagerTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.service.impl.LookupManagerImplTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.service.impl.PasswordTokenManagerTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.service.impl.PersistentPasswordTokenManagerTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.service.impl.UserManagerImplTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.service.impl.UserSecurityAdviceTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.util.DateConverterTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.util.DateUtilTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.webapp.controller.PasswordHintControllerTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.webapp.controller.SignupControllerTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.webapp.controller.UpdatePasswordControllerTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.webapp.controller.UserControllerTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.webapp.controller.UserFormControllerTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.webapp.filter.LocaleFilterTest.xml
+ create mode 100644 target/surefire-reports/TEST-com.profive.webapp.listener.StartupListenerTest.xml
+ create mode 100644 target/surefire-reports/com.profive.dao.GenericDaoTest.txt
+ create mode 100644 target/surefire-reports/com.profive.dao.LookupDaoTest.txt
+ create mode 100644 target/surefire-reports/com.profive.dao.RoleDaoTest.txt
+ create mode 100644 target/surefire-reports/com.profive.dao.UserDaoTest.txt
+ create mode 100644 target/surefire-reports/com.profive.dao.hibernate.HibernateConfigurationTest.txt
+ create mode 100644 target/surefire-reports/com.profive.service.MailEngineTest.txt
+ create mode 100644 target/surefire-reports/com.profive.service.UserExistsExceptionTest.txt
+ create mode 100644 target/surefire-reports/com.profive.service.UserManagerTest.txt
+ create mode 100644 target/surefire-reports/com.profive.service.impl.LookupManagerImplTest.txt
+ create mode 100644 target/surefire-reports/com.profive.service.impl.PasswordTokenManagerTest.txt
+ create mode 100644 target/surefire-reports/com.profive.service.impl.PersistentPasswordTokenManagerTest.txt
+ create mode 100644 target/surefire-reports/com.profive.service.impl.UserManagerImplTest.txt
+ create mode 100644 target/surefire-reports/com.profive.service.impl.UserSecurityAdviceTest.txt
+ create mode 100644 target/surefire-reports/com.profive.util.DateConverterTest.txt
+ create mode 100644 target/surefire-reports/com.profive.util.DateUtilTest.txt
+ create mode 100644 target/surefire-reports/com.profive.webapp.controller.PasswordHintControllerTest.txt
+ create mode 100644 target/surefire-reports/com.profive.webapp.controller.SignupControllerTest.txt
+ create mode 100644 target/surefire-reports/com.profive.webapp.controller.UpdatePasswordControllerTest.txt
+ create mode 100644 target/surefire-reports/com.profive.webapp.controller.UserControllerTest.txt
+ create mode 100644 target/surefire-reports/com.profive.webapp.controller.UserFormControllerTest.txt
+ create mode 100644 target/surefire-reports/com.profive.webapp.filter.LocaleFilterTest.txt
+ create mode 100644 target/surefire-reports/com.profive.webapp.listener.StartupListenerTest.txt
+ create mode 100644 target/test-classes/ApplicationResources_de.properties
+ create mode 100644 target/test-classes/ApplicationResources_fr.properties
+ create mode 100644 target/test-classes/ApplicationResources_nl.properties
+ create mode 100644 target/test-classes/WEB-INF/applicationContext-validation.xml
+ create mode 100644 target/test-classes/WEB-INF/applicationContext.xml
+ create mode 100644 target/test-classes/WEB-INF/cxf-servlet.xml
+ create mode 100644 target/test-classes/WEB-INF/decorators.xml
+ create mode 100644 target/test-classes/WEB-INF/dispatcher-servlet.xml
+ create mode 100644 target/test-classes/WEB-INF/dwr.xml
+ create mode 100644 target/test-classes/WEB-INF/menu-config.xml
+ create mode 100644 target/test-classes/WEB-INF/resin-web.xml
+ create mode 100644 target/test-classes/WEB-INF/security.xml
+ create mode 100644 target/test-classes/WEB-INF/sitemesh.xml
+ create mode 100644 target/test-classes/WEB-INF/urlrewrite.xml
+ create mode 100644 target/test-classes/WEB-INF/validation.xml
+ create mode 100644 target/test-classes/WEB-INF/validator-rules-custom.xml
+ create mode 100644 target/test-classes/WEB-INF/validator-rules.xml
+ create mode 100644 target/test-classes/WEB-INF/web.xml
+ create mode 100644 target/test-classes/WEB-INF/wro.xml
+ create mode 100644 target/test-classes/applicationContext-resources.xml
+ create mode 100644 target/test-classes/applicationContext-test.xml
+ create mode 100644 target/test-classes/com/profive/dao/BaseDaoTestCase.class
+ create mode 100644 target/test-classes/com/profive/dao/GenericDaoTest.class
+ create mode 100644 target/test-classes/com/profive/dao/LookupDaoTest.class
+ create mode 100644 target/test-classes/com/profive/dao/RoleDaoTest.class
+ create mode 100644 target/test-classes/com/profive/dao/UserDaoTest.class
+ create mode 100644 target/test-classes/com/profive/dao/hibernate/HibernateConfigurationTest.class
+ create mode 100644 target/test-classes/com/profive/service/BaseManagerTestCase.class
+ create mode 100644 target/test-classes/com/profive/service/MailEngineTest.class
+ create mode 100644 target/test-classes/com/profive/service/MockUserDetailsService.class
+ create mode 100644 target/test-classes/com/profive/service/UserExistsExceptionTest.class
+ create mode 100644 target/test-classes/com/profive/service/UserManagerTest.class
+ create mode 100644 target/test-classes/com/profive/service/UserManagerTest.properties
+ create mode 100644 target/test-classes/com/profive/service/impl/BaseManagerMockTestCase.class
+ create mode 100644 target/test-classes/com/profive/service/impl/LookupManagerImplTest.class
+ create mode 100644 target/test-classes/com/profive/service/impl/PasswordTokenManagerTest.class
+ create mode 100644 target/test-classes/com/profive/service/impl/PersistentPasswordTokenManagerTest.class
+ create mode 100644 target/test-classes/com/profive/service/impl/UserManagerImplTest.class
+ create mode 100644 target/test-classes/com/profive/service/impl/UserManagerImplTest.properties
+ create mode 100644 target/test-classes/com/profive/service/impl/UserSecurityAdviceTest.class
+ create mode 100644 target/test-classes/com/profive/util/DateConverterTest$1.class
+ create mode 100644 target/test-classes/com/profive/util/DateConverterTest.class
+ create mode 100644 target/test-classes/com/profive/util/DateUtilTest.class
+ create mode 100644 target/test-classes/com/profive/webapp/controller/BaseControllerTestCase.class
+ create mode 100644 target/test-classes/com/profive/webapp/controller/PasswordHintControllerTest.class
+ create mode 100644 target/test-classes/com/profive/webapp/controller/SignupControllerTest.class
+ create mode 100644 target/test-classes/com/profive/webapp/controller/UpdatePasswordControllerTest.class
+ create mode 100644 target/test-classes/com/profive/webapp/controller/UserControllerTest.class
+ create mode 100644 target/test-classes/com/profive/webapp/controller/UserFormControllerTest.class
+ create mode 100644 target/test-classes/com/profive/webapp/filter/LocaleFilterTest.class
+ create mode 100644 target/test-classes/com/profive/webapp/filter/MockFilterChain.class
+ create mode 100644 target/test-classes/com/profive/webapp/listener/StartupListenerTest.class
+ create mode 100644 target/test-classes/config.xmlf
+ create mode 100644 target/test-classes/hibernate.properties
+ create mode 100644 target/test-classes/jdbc.properties
+ create mode 100644 target/test-classes/log4j.xml
+ create mode 100644 target/test-classes/login.xmlf
+ create mode 100644 target/test-classes/mail.properties
+ create mode 100644 target/test-classes/passwordRecovery.vm
+ create mode 100644 target/test-classes/passwordUpdated.vm
+ create mode 100644 target/test-classes/sample-data.xml
+ create mode 100644 target/test-classes/sample-data.xsd
+ create mode 100644 target/test-classes/test-attachment.txt
+ create mode 100644 target/test-classes/web-tests.xml
+ create mode 100644 velocity.log
+vishal@vishal-ThinkPad-E450:~/p5m_projects/core-api$ git push originPush
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream originPush master
+
+vishal@vishal-ThinkPad-E450:~/p5m_projects/core-api$ git push originPush master
+Counting objects: 473, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (441/441), done.
+Writing objects: 100% (473/473), 424.45 KiB | 0 bytes/s, done.
+Total 473 (delta 81), reused 0 (delta 0)
+remote: Resolving deltas: 100% (81/81), done.
+To https://github.com/vishalpandey89/core-api.git
+   706db94..6ed5cdb  master -> master
+vishal@vishal-ThinkPad-E450:~/p5m_projects/core-api$ 
